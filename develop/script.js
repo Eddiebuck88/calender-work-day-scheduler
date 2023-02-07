@@ -14,12 +14,12 @@ $(function () {
       });
     
       // array of hours of the work day
-      let hoursOfDay = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21];
+      let hoursOfDay = [9, 10, 11, 12, 13, 14, 15, 16, 17];
     
       for (i = 0; i < hoursOfDay.length; i++) {
         let eventStorage = localStorage.getItem('hour-' + hoursOfDay[i]);
         let hourTextArea = $('#hour-' + hoursOfDay[i] + ' > .description');
-        hourTextArea.textContent = eventStorage;
+        hourTextArea.text(eventStorage)
       }
     
       // variable of current hour to be able to add past present and future class
